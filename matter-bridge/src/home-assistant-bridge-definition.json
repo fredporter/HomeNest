@@ -1,0 +1,7 @@
+{
+  "bridge_name": "uHOME Home Assistant Bridge",
+  "version": "1.0.0",
+  "description": "Bridge definition for Home Assistant integration with uHOME",
+  "entities": [],
+  "services": []
+}
