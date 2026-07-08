@@ -1,8 +1,7 @@
 {
-  "name": "uHomeNest + UniversalSurfaceXD",
+  "name": "HomeNest",
   "folders": [
-    { "name": "uHomeNest", "path": "." },
-    { "name": "UniversalSurfaceXD", "path": "../Apps/UniversalSurfaceXD" }
+    { "name": "HomeNest", "path": "." }
   ],
   "settings": {
     "files.exclude": {
@@ -13,7 +12,8 @@
       "**/venv": true,
       "**/node_modules": true,
       "**/__pycache__": true,
-      "**/.pytest_cache": true
+      "**/.pytest_cache": true,
+      "**/uCode2/**": true
     },
     "editor.tabSize": 2,
     "files.associations": {
