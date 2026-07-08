@@ -1,13 +1,21 @@
-# uHomeNest auto-install preseed
-uhome:
-  version: 1.0.0
-  install_path: /opt/uhome
-  media_vault: /home/uhome/media
+# HomeNest auto-install preseed
+# Target: Linux Mint 22+ Cinnamon
+home_nest:
+  version: 0.2.0
+  target_os: linux-mint
+  target_de: cinnamon
+  install_path: /opt/homenest
+  service_user: homenest
+  media_vault: /home/homenest/media
+  api_port: 7890
+  console_port: 8080
+  skip_jellyfin: false
   integrations:
-    matter: true
-    home-assistant: false
-  network:
-    api_port: 7890
+    home_assistant: true
+    jellyfin: true
+  nginx:
+    enabled: true
+    proxy_api: true
   udev:
     enable_rules: true
     reload_on_install: true

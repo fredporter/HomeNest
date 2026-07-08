@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=HomeNest
+Comment=Home Media & Automation Console
+Exec=xdg-open http://localhost:8080
+Icon=applications-multimedia
+Terminal=false
+Type=Application
+Categories=AudioVideo;TV;Player;
+Keywords=media;jellyfin;home assistant;tv;movies;music;
+StartupNotify=true
+StartupWMClass=HomeNest

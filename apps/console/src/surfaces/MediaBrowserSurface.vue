@@ -3,9 +3,11 @@
  * Media Browser Surface — poster wall + category tabs
  */
 import { onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useMediaStore, type MediaItem } from '@/stores/media'
 import UIcon from '@/skills/atoms/UIcon.vue'
 
+const router = useRouter()
 const media = useMediaStore()
 
 const activeCategory = computed(() => 'all')
@@ -18,8 +20,8 @@ onMounted(() => {
   media.fetchLibrary()
 })
 
-function playItem(item: MediaItem) {
-  media.play(item)
+function openDetail(item: MediaItem) {
+  router.push(`/media/${encodeURIComponent(item.id)}`)
 }
 </script>
 
@@ -66,7 +68,7 @@ function playItem(item: MediaItem) {
         v-for="item in filteredItems()"
         :key="item.id"
         class="hn-poster-card"
-        @click="playItem(item)"
+        @click="openDetail(item)"
       >
         <div class="hn-poster-card__image">
           <UIcon :name="item.type === 'movie' ? 'movie' : item.type === 'tv' ? 'tv' : 'music_note'" />

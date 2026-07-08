@@ -1,33 +1,18 @@
-from datetime import datetime, timezone
+"""Playback state facade — delegates to SQLite-backed persistence.
 
+Import path preserved for backward compatibility with existing handlers.
+All functions now persist across server restarts.
+"""
 
-_NOW_PLAYING = {
-    "state": "idle",
-    "target": "default",
-    "media": "",
-    "updated_at": datetime.now(timezone.utc).isoformat(),
-}
-
-
-def _now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
-
-
-def set_now_playing(target: str, media: str) -> dict:
-    _NOW_PLAYING["state"] = "playing"
-    _NOW_PLAYING["target"] = target
-    _NOW_PLAYING["media"] = media
-    _NOW_PLAYING["updated_at"] = _now_iso()
-    return dict(_NOW_PLAYING)
-
-
-def clear_now_playing(target: str) -> dict:
-    _NOW_PLAYING["state"] = "idle"
-    _NOW_PLAYING["target"] = target
-    _NOW_PLAYING["media"] = ""
-    _NOW_PLAYING["updated_at"] = _now_iso()
-    return dict(_NOW_PLAYING)
+from core.persistence import (
+    get_now_playing,
+    set_now_playing,
+    clear_now_playing,
+    update_playback_state,
+    set_volume,
+)
 
 
 def get_now_playing_state() -> dict:
-    return dict(_NOW_PLAYING)
+    """Return current now-playing state (SQLite-backed)."""
+    return get_now_playing()

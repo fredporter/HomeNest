@@ -36,6 +36,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: 'Automation', icon: 'bolt' },
   },
   {
+    path: '/media/:id',
+    name: 'media-detail',
+    component: () => import('@/surfaces/MediaDetailSurface.vue'),
+    meta: { title: 'Media Detail', icon: 'movie' },
+  },
+  {
     path: '/settings',
     name: 'settings',
     component: () => import('@/surfaces/SettingsSurface.vue'),

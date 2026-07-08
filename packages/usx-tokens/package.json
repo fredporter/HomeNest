@@ -1,6 +1,6 @@
 {
   "name": "@udos/usx-tokens",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "USX Design Token System — shared CSS custom properties for uDos surfaces (uCore + HomeNest)",
   "type": "module",
   "main": "usx-standard.css",
@@ -22,6 +22,8 @@
     "./tokens/*": "./tokens/*.css",
     "./themes/dark": "./themes/dark.css",
     "./themes/light": "./themes/light.css",
+    "./themes/c64": "./themes/c64.css",
+    "./themes/teletext": "./themes/teletext.css",
     "./themes/high-contrast": "./themes/high-contrast.css",
     "./themes/*": "./themes/*.css",
     "./home-nest/console-grid": "./home-nest/console-grid.css",
