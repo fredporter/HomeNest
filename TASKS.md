@@ -49,18 +49,19 @@
 | 4 | API Hardening, Locale, Playback Targets, uCore Integration | 8 done |
 | Docs | SETUP, INSTALLER, ARCHITECTURE, Sprint Plan | 4 done |
 
-**Total: 35 done, 0 backlog, 0 blocked**
+**Total: 37 done, 0 backlog, 0 blocked**
 
 ## Backlog / Deferred
 
-- [ ] **Console Polish** (desktop shortcut, first-run-launch, locale detection) — *Deferred pending Operator Test and Feedback*
-- [ ] **Developer Integration** — Backend dev-mode scaffold (similar to uCore backend structure)
-  - [ ] Scaffold `server/dev/` with local Jellyfin mock data
-  - [ ] Scaffold `server/dev/` with HA simulation fixtures
-  - [ ] Add `npm run dev` to run full stack locally with hot-reload
-  - [ ] Document dev environment setup in `docs/DEVELOPMENT.md`
+- [x] **Console Polish** (desktop shortcut, first-run-launch, locale detection)
+- [x] **Developer Integration** — Backend dev-mode scaffold
+  - [x] Scaffold `server/dev/` with Jellyfin mock data (`mock_data.py`)
+  - [x] Scaffold `server/dev/` with HA simulation fixtures (`mock_data.py`)
+  - [x] Add root `package.json` with `npm run dev` / `npm run dev:mock`
+  - [x] Create `server/dev/launcher.py` (auto-patches Jellyfin + HA clients)
+  - [x] Document dev environment in `docs/DEVELOPMENT.md`
 
-## API Endpoints (19 total)
+## API Endpoints (23 total)
 
 | Method | Path | Purpose |
 |---|---|---|

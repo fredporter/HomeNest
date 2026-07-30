@@ -45,7 +45,7 @@ export JELLYFIN_API_KEY=your-api-key-here
 cd server && python3 api/main.py
 ```
 
-Or use the Settings UI in the console to configure on the fly (coming in Sprint 2.1).
+Or use the Settings surface in the console to configure credentials live.
 
 ### Verification
 
@@ -139,10 +139,10 @@ For a future browser-based setup wizard, the flow would be:
 5. API validates the token and stores it server-side
 
 ### Implementation Map
-- [x] Environment-variable-based config (current)
-- [ ] In-app token entry via Settings panel (Sprint 2.1)
-- [ ] Server-side config persistence (Sprint 2.3 — SQLite state)
-- [ ] Token validation on entry (Sprint 2.1)
+- [x] Environment-variable-based config
+- [x] In-app token entry via Settings surface
+- [x] Server-side `.env` persistence
+- [x] Token validation on entry
 - [ ] OAuth redirect flow for Jellyfin (future)
 
 ---

@@ -12,7 +12,7 @@ Deliver a Linux-first decentralized home stream server with Jellyfin backbone, `
 4. HomeNest Installer for Linux Mint Cinnamon ✅ (`scripts/install.sh`)
 5. API hardening — validation, rate limiting, structured errors ✅
 6. **Console Polish** — *Deferred, pending Operator Test and Feedback*
-7. **Developer Integration** — Backend dev-mode scaffold (local Jellyfin/HA mocks, hot-reload)
+7. **Developer Integration** — Backend dev-mode scaffold ✅ (mock data, dev launcher, `npm run dev:mock`)
 
 ## Done (Sprints 1–3)
 

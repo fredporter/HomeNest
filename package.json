@@ -1,13 +1,18 @@
 {
-  "name": "homenest-console",
+  "name": "homenest",
   "version": "0.1.0-dev",
   "private": true,
   "type": "module",
-  "description": "HomeNest Console \u2014 Device-ready home media/automation control surface (React, Bootstrap + GitHub Dark)",
+  "description": "HomeNest — Linux-first decentralized home stream server with Jellyfin backbone, Home Assistant bridge, and controller-first 10-foot UI",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "npm run dev:api & npm run dev:console",
+    "dev:mock": "MOCK_JELLYFIN=1 MOCK_HA=1 npm run dev:api & npm run dev:console",
+    "dev:api": "cd server && python3 dev/launcher.py",
+    "dev:api:mock": "MOCK_JELLYFIN=1 MOCK_HA=1 cd server && python3 dev/launcher.py",
+    "dev:console": "cd apps/console && npm run dev",
+    "build": "cd apps/console && npm run build",
+    "install:console": "cd apps/console && npm install",
+    "preview:console": "cd apps/console && npm run preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
