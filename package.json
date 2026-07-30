@@ -1,9 +1,9 @@
 {
   "name": "homenest-console",
-  "version": "0.1.0",
+  "version": "0.1.0-dev",
   "private": true,
   "type": "module",
-  "description": "HomeNest Console — Device-ready home media/automation control surface (React, Bootstrap + GitHub Dark)",
+  "description": "HomeNest Console \u2014 Device-ready home media/automation control surface (React, Bootstrap + GitHub Dark)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
