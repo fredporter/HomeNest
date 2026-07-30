@@ -11,6 +11,7 @@ Current module families:
 - `media/`
 - `dvr/`
 - `home-ops/`
+- `home-ops/udos-home/` — udos-\* home automation starter plugin module
 - `steam-surface/`
 - `home-assistant-bridge/` as transitional local runtime support aligned to
   `uHOME-matter`

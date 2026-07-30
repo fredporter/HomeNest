@@ -1,0 +1,11 @@
+{
+  "id": "udos-home",
+  "name": "Home Automation",
+  "kind": "plugin",
+  "version": "0.1.0",
+  "description": "Home automation domain plugin (udos-*)",
+  "optional": true,
+  "api_prefix": "/api/home",
+  "route_registrar": "udos_home.routes.register_routes",
+  "dependencies": ["ucore-core"]
+}
